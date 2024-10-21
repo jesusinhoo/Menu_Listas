@@ -44,27 +44,26 @@ namespace Menu_Listas
 
         public int Find(int pos)
         {
-            Nodo act;
-            act = inicio;
-            int poss = 0;
-            if (act == null)
+            if (inicio == null)
             {
                 Console.WriteLine("Lista vacia.");
+                return -1;
             }
-            else
+            Nodo act = inicio;
+            int poss = 0;
+            while (act != null)
             {
-                while (act != null)
+                if (poss == pos)
                 {
-                    if (act.Sig != null)
-                    {
-                        act = act.Sig; poss++;
-                        if (poss == pos)
-                        {
-                            return act.Valor;
-                        }
-                    }
+                    return act.Valor;
+
                 }
+                act = act.Sig;
+                poss++;
             }
+            if (act == null)
+            Console.WriteLine("Pocicion fuera de rango");
+
             return -1;
         }
 

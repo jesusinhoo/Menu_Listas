@@ -42,7 +42,10 @@ namespace Menu_Listas
                 }
                 else if (opc == 3)
                 {
-
+                    Console.WriteLine("Da la pocision: ");
+                    int pos = int.Parse(Console.ReadLine());
+                    Console.WriteLine("El valor es: "+miLista.Find(pos));
+                    Console.ReadKey();
                 }
                 else if (opc == 4)
                 {
@@ -65,7 +68,8 @@ namespace Menu_Listas
                 else if (opc == 8)
                 {
                     Console.WriteLine("Saliendo...");
-                    wh = 1;
+                    wh = 1; 
+                    Console.ReadKey();
                 }
             }
         }
