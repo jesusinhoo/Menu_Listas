@@ -56,7 +56,6 @@ namespace Menu_Listas
                 if (poss == pos)
                 {
                     return act.Valor;
-
                 }
                 act = act.Sig;
                 poss++;
